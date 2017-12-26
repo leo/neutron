@@ -17,8 +17,10 @@
   "license": "MIT",
   "dependencies": {
     "arg": "^1.0.0",
+    "asar": "^0.14.0",
     "chalk": "^2.3.0",
     "fs-extra": "^5.0.0",
+    "globby": "^7.1.1",
     "klaw": "^2.1.1",
     "plist": "^2.1.0"
   }

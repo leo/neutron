@@ -12,6 +12,7 @@ const { help } = require('../lib/log')
 const prepareBase = require('../lib/skeleton')
 const clean = require('../lib/clean')
 const setInfo = require('../lib/info')
+const createBundle = require('../lib/bundle')
 
 const args = parse({
   '--version': Boolean,
@@ -36,6 +37,7 @@ if (args['--help'] || sub.has('help')) {
 
 const main = async () => {
   const output = resolve(process.cwd(), args['--output'] || 'out')
+  const appName = 'Now'
 
   // Ensure we can start fresh by cleaning up the old output
   await clean(output)
@@ -44,8 +46,12 @@ const main = async () => {
   await prepareBase(output)
 
   // Prepare the meta files and name everything correctly
-  await setInfo(output, 'Now')
+  await setInfo(output, appName)
 
+  // Bundle all the application into an `.asar` archive
+  await createBundle(output, appName)
+
+  // Let the user know we're done
   console.log('Done!')
 }
 
