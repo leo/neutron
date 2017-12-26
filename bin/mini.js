@@ -1,17 +1,22 @@
 #!/usr/bin/env node
 
+const { resolve } = require('path')
 const parse = require('arg')
 const package = require('../package')
-const help = require('../lib/help')
+const { help } = require('../lib/log')
+const prepareBase = require('../lib/skeleton')
 
 const args = parse({
   '--version': Boolean,
   '--help': Boolean,
+  '--output': String,
   '-v': '--version',
-  '-h': '--help'
+  '-h': '--help',
+  '-o': '--output'
 })
 
 const sub = new Set(args._)
+const output = resolve(process.cwd(), args['--output'] || 'out')
 
 if (args['--version']) {
   console.log(package.version)
@@ -23,4 +28,10 @@ if (args['--help'] || sub.has('help')) {
   process.exit(0)
 }
 
-console.log('I am mini')
+const main = async () => {
+  await prepareBase(output)
+  console.log('done')
+}
+
+// Let's rock this
+main()
