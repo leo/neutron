@@ -16,6 +16,7 @@
   "author": "leo",
   "license": "MIT",
   "dependencies": {
-    "arg": "^1.0.0"
+    "arg": "^1.0.0",
+    "chalk": "^2.3.0"
   }
 }
