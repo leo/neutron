@@ -1,0 +1,15 @@
+{
+  "name": "mini",
+  "version": "0.1.0",
+  "description": "Distribute Electron applications built with Next.js",
+  "repository": "leo/mini",
+  "keywords": [
+    "electron",
+    "next",
+    "pack",
+    "production",
+    "bundle"
+  ],
+  "author": "leo",
+  "license": "MIT"
+}
