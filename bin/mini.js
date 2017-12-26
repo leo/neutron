@@ -15,13 +15,12 @@ const args = parse({
   '-o': '--output'
 })
 
-const sub = new Set(args._)
-const output = resolve(process.cwd(), args['--output'] || 'out')
-
 if (args['--version']) {
   console.log(package.version)
   process.exit(0)
 }
+
+const sub = new Set(args._)
 
 if (args['--help'] || sub.has('help')) {
   console.log(help)
@@ -29,6 +28,8 @@ if (args['--help'] || sub.has('help')) {
 }
 
 const main = async () => {
+  const output = resolve(process.cwd(), args['--output'] || 'out')
+
   await prepareBase(output)
   console.log('done')
 }
