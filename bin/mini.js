@@ -5,6 +5,7 @@ const parse = require('arg')
 const package = require('../package')
 const { help } = require('../lib/log')
 const prepareBase = require('../lib/skeleton')
+const clean = require('../lib/clean')
 
 const args = parse({
   '--version': Boolean,
@@ -30,7 +31,9 @@ if (args['--help'] || sub.has('help')) {
 const main = async () => {
   const output = resolve(process.cwd(), args['--output'] || 'out')
 
+  await clean(output)
   await prepareBase(output)
+
   console.log('done')
 }
 
