@@ -41,10 +41,10 @@ const main = async () => {
   await clean(output)
 
   // But the pre-built Electron binary into place
-  const location = await prepareBase(output)
+  await prepareBase(output)
 
   // Prepare the meta files and name everything correctly
-  await setInfo(location)
+  await setInfo(output, 'Now')
 
   console.log('Done!')
 }
