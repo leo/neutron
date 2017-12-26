@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "Distribute Electron applications built with Next.js",
   "repository": "leo/mini",
+  "bin": {
+    "mini": "./bin/mini.js"
+  },
   "keywords": [
     "electron",
     "next",
@@ -11,5 +14,8 @@
     "bundle"
   ],
   "author": "leo",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "arg": "^1.0.0"
+  }
 }
