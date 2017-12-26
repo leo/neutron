@@ -1,11 +1,17 @@
 #!/usr/bin/env node
 
+// Native
 const { resolve } = require('path')
+
+// Packages
 const parse = require('arg')
+
+// Utilities
 const package = require('../package')
 const { help } = require('../lib/log')
 const prepareBase = require('../lib/skeleton')
 const clean = require('../lib/clean')
+const setInfo = require('../lib/info')
 
 const args = parse({
   '--version': Boolean,
@@ -31,10 +37,16 @@ if (args['--help'] || sub.has('help')) {
 const main = async () => {
   const output = resolve(process.cwd(), args['--output'] || 'out')
 
+  // Ensure we can start fresh by cleaning up the old output
   await clean(output)
-  await prepareBase(output)
 
-  console.log('done')
+  // But the pre-built Electron binary into place
+  const location = await prepareBase(output)
+
+  // Prepare the meta files and name everything correctly
+  await setInfo(location)
+
+  console.log('Done!')
 }
 
 // Let's rock this
