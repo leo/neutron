@@ -1,10 +1,10 @@
 {
-  "name": "mini",
+  "name": "pack",
   "version": "0.1.0",
   "description": "Distribute Electron applications built with Next.js",
-  "repository": "leo/mini",
+  "repository": "leo/pack",
   "bin": {
-    "mini": "./bin/mini.js"
+    "pack": "./bin/pack.js"
   },
   "keywords": [
     "electron",
