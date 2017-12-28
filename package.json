@@ -16,7 +16,6 @@
   "author": "leo",
   "license": "MIT",
   "dependencies": {
-    "@yarnpkg/lockfile": "^1.0.0",
     "arg": "^1.0.0",
     "asar": "^0.14.0",
     "chalk": "^2.3.0",
