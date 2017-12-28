@@ -18,6 +18,7 @@
   "dependencies": {
     "arg": "^1.0.0",
     "asar": "^0.14.0",
+    "capitalize": "^1.0.0",
     "chalk": "^2.3.0",
     "dot-prop": "^4.2.0",
     "fs-extra": "^5.0.0",
