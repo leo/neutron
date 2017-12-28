@@ -1,4 +1,4 @@
-# pack
+# 📦 pack
 
 This is a opinionated approach to packing up Electron applications for distribution. It's specifically crafted for bundling applications built with Next.js ([electron-next](https://github.com/leo/electron-next)), which allows for the most minimal amount of configuration and the maximum of performance.
 
