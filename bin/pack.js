@@ -61,7 +61,7 @@ const main = async () => {
   await setInfo(output, appName)
 
   // Bundle all the application into an `.asar` archive
-  await createBundle(output, appName)
+  await createBundle(path, output, appName)
 
   // Let the user know we're done
   console.log('Done!')
