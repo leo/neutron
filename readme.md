@@ -44,6 +44,25 @@ npm run build
 
 Easy as 🍰!
 
+## Configuration
+
+By default, `pack` will work just fine without any addition configuration. However, you can add a property named `pack` to the `package.json` file of your application for changing the behaviour:
+
+```json
+"pack": {
+  "name": "Test"
+}
+```
+
+It can hold the following properites (the dot in property names indicates a sub property):
+
+| Property         | Description                                                                                                                                                                                                                                                            |
+|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `name`           | Holds the name of your application on all platforms.                                                                                                                                                                                                                   |
+| `macOS.id`       | The string that identifies your application to the system. As an example: If your company is called "ZEIT" (zeit.co) and your application is called "Now", the `id` should be "co.zeit.now".                                                                           |
+| `macOS.category` | The type of application you're building ([possible values](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html#//apple_ref/doc/uid/TP40009250-SW8)).                                    |
+| `macOS.info`     | This property lets you extend the information contained within the `Info.plist` files in your bundle. It holds an object made of key value pairs to include in those files. As an example, adding `LSUIElement` with a value of  `1` would hide the dock icon forever. |
+
 ## Contributing
 
 1. [Fork](https://help.github.com/articles/fork-a-repo/) this repository to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your local device
