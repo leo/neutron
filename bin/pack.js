@@ -9,7 +9,7 @@ const { pathExists } = require('fs-extra')
 
 // Utilities
 const package = require('../package')
-const { help } = require('../lib/log')
+const { help, info } = require('../lib/log')
 const prepareBase = require('../lib/skeleton')
 const clean = require('../lib/clean')
 const setInfo = require('../lib/info')
@@ -65,7 +65,7 @@ const main = async () => {
   await createBundle(cwd, output, config)
 
   // Let the user know we're done
-  console.log('Done!')
+  console.log(info('Done! 🎉'))
 }
 
 // Let's rock this
