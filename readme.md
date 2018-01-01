@@ -22,7 +22,7 @@ That's it!
 
 ## Existing App
 
-If you already have a working application that was built using [electron-next](https://github.com/leo/electron-next), simply install the package as a local dependency for development...
+If you already have a working application into which [electron-next](https://leo.im/2017/electron-next) was implemented, simply install the package as a local dependency for development...
 
 ```bash
 npm install pack
