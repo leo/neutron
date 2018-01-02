@@ -1,6 +1,6 @@
 {
   "name": "pack",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Distribute Electron applications built with Next.js",
   "repository": "leo/pack",
   "bin": {
