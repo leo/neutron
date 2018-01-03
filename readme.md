@@ -6,22 +6,16 @@ If you aren't familiar with the concept of such applications yet, read [this pos
 
 ## Get Started
 
-In the case that you want to build a new application, the only thing you need to do is clone the boilerplate:
+In the case that you want to build a new application, firstly install the package:
 
 ```bash
-git clone https://github.com/leo/electron-next-skeleton
+npm install -g pack
 ```
 
-Once that's done, use this command to start the app:
+Once that's done, generate a new boilerplate like this:
 
 ```bash
-npm start
-```
-
-And this one to bundle it:
-
-```bash
-npm run pack
+pack init
 ```
 
 That's it!
