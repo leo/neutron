@@ -51,7 +51,7 @@ const main = async () => {
   }
 
   if (sub === 'init') {
-    generateBoilerplate()
+    generateBoilerplate(_[1] || 'my-app')
     return
   }
 
