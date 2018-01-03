@@ -10,12 +10,12 @@ const { pathExists } = require('fs-extra')
 // Utilities
 const package = require('../package')
 const { help, info } = require('../lib/log')
-const prepareBase = require('../lib/base')
-const clean = require('../lib/clean')
-const setInfo = require('../lib/info')
-const createBundle = require('../lib/bundle')
+const prepareBase = require('../lib/actions/pull')
+const clean = require('../lib/actions/clean')
+const setInfo = require('../lib/actions/set-info')
+const createBundle = require('../lib/actions/bundle')
 const getConfig = require('../lib/config')
-const generateBoilerplate = require('../lib/skeleton')
+const generateBoilerplate = require('../lib/actions/init')
 
 const { _, ...args } = parse({
   '--version': Boolean,
