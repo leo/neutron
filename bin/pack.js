@@ -9,14 +9,14 @@ const { pathExists } = require('fs-extra')
 
 // Utilities
 const package = require('../package')
-const { help } = require('../lib/log')
+const help = require('../lib/log/help')
 const prepareBase = require('../lib/actions/pull')
 const clean = require('../lib/actions/clean')
 const setInfo = require('../lib/actions/set-info')
 const createBundle = require('../lib/actions/bundle')
 const getConfig = require('../lib/config')
 const generateBoilerplate = require('../lib/actions/init')
-const spinner = require('../lib/spinner')
+const spinner = require('../lib/log/spinner')
 
 const { _, ...args } = parse({
   '--version': Boolean,
