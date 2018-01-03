@@ -10,11 +10,12 @@ const { pathExists } = require('fs-extra')
 // Utilities
 const package = require('../package')
 const { help, info } = require('../lib/log')
-const prepareBase = require('../lib/skeleton')
+const prepareBase = require('../lib/base')
 const clean = require('../lib/clean')
 const setInfo = require('../lib/info')
 const createBundle = require('../lib/bundle')
 const getConfig = require('../lib/config')
+const generateBoilerplate = require('../lib/skeleton')
 
 const { _, ...args } = parse({
   '--version': Boolean,
@@ -25,7 +26,7 @@ const { _, ...args } = parse({
   '-o': '--output'
 })
 
-const subSpec = [ 'help' ]
+const subSpec = [ 'help', 'init' ]
 const sub = subSpec[subSpec.indexOf(_[0])]
 
 const main = async () => {
@@ -47,6 +48,11 @@ const main = async () => {
   if (args['--help'] || sub === 'help') {
     console.log(help)
     process.exit(0)
+  }
+
+  if (sub === 'init') {
+    generateBoilerplate()
+    return
   }
 
   const output = resolve(cwd, args['--output'] || 'out')
