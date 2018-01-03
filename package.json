@@ -26,10 +26,7 @@
     "fs-extra": "^5.0.0",
     "globby": "^7.1.1",
     "klaw": "^2.1.1",
-    "node-fetch": "^1.7.3",
     "plist": "^2.1.0",
-    "promisepipe": "^2.1.1",
-    "tmp-promise": "^1.0.4",
-    "unzip": "^0.1.11"
+    "tmp-promise": "^1.0.4"
   }
 }
