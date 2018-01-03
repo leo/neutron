@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // Native
-const { resolve } = require('path')
+const { resolve, basename } = require('path')
 
 // Packages
 const parse = require('arg')
@@ -9,13 +9,14 @@ const { pathExists } = require('fs-extra')
 
 // Utilities
 const package = require('../package')
-const { help, info } = require('../lib/log')
+const { help } = require('../lib/log')
 const prepareBase = require('../lib/actions/pull')
 const clean = require('../lib/actions/clean')
 const setInfo = require('../lib/actions/set-info')
 const createBundle = require('../lib/actions/bundle')
 const getConfig = require('../lib/config')
 const generateBoilerplate = require('../lib/actions/init')
+const spinner = require('../lib/spinner')
 
 const { _, ...args } = parse({
   '--version': Boolean,
@@ -71,7 +72,8 @@ const main = async () => {
   await createBundle(cwd, output, config)
 
   // Let the user know we're done
-  console.log(info('Done! 🎉'))
+  const directory = basename(output)
+  spinner.clear(`You can find your bundled app in "${directory}".`)
 }
 
 // Let's rock this
