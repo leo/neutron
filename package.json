@@ -1,6 +1,7 @@
 {
   "name": "bundle",
   "version": "1.1.1",
+  "preferGlobal": true,
   "description": "The easiest (yet most scalable) way to build Electron apps",
   "repository": "leo/bundle",
   "bin": {
