@@ -14,16 +14,10 @@ If you aren't familiar with the concept of such applications yet, read [this pos
 
 ## Get Started
 
-In the case that you want to build a new application, firstly install the package:
+In the case that you want to build a new application, run this command:
 
 ```bash
-npm install -g bundle
-```
-
-Once that's done, generate a new boilerplate like this:
-
-```bash
-bundle init
+npx bundle init
 ```
 
 That's it!
