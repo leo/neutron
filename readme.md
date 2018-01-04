@@ -5,7 +5,7 @@ This is an opinionated approach to packaging Electron applications for distribut
 As an example, these are **all the commands you'll ever need**:
 
 - `bundle init` generates a new boilerplate
-- `bundle start` or `npm start` run your app for development
+- `bundle start` or `npm start` runs your app for development
 - `bundle` compiles your final app bundle
 
 Isn't that magical? 💫
