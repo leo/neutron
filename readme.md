@@ -2,7 +2,7 @@
 
 This is an opinionated approach to packaging Electron applications for distribution. It's specifically crafted for bundling applications built with Next.js ([electron-next](https://github.com/leo/electron-next)), which allows for the most minimal amount of configuration and the maximum of performance.
 
-As an example, these are all the commands you'll ever need:
+As an example, these are **all the commands you'll ever need**:
 
 - `bundle init` generates a new boilerplate
 - `bundle start` or `npm start` run your app for development
