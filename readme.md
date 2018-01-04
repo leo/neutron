@@ -1,4 +1,4 @@
-# 📦 pack
+# 📦 bundle
 
 This is an opinionated approach to packaging Electron applications for distribution. It's specifically crafted for bundling applications built with Next.js ([electron-next](https://github.com/leo/electron-next)), which allows for the most minimal amount of configuration and the maximum of performance.
 
@@ -9,13 +9,13 @@ If you aren't familiar with the concept of such applications yet, read [this pos
 In the case that you want to build a new application, firstly install the package:
 
 ```bash
-npm install -g pack
+npm install -g bundle
 ```
 
 Once that's done, generate a new boilerplate like this:
 
 ```bash
-pack init
+bundle init
 ```
 
 That's it!
@@ -25,36 +25,36 @@ That's it!
 If you already have a working application into which [electron-next](https://leo.im/2017/electron-next) was implemented, simply install the package as a local dependency for development...
 
 ```bash
-npm install pack
+npm install bundle
 ```
 
 And then add a new [npm script](https://docs.npmjs.com/misc/scripts) like this:
 
 ```json
 "scripts": {
-  "build": "pack"
+  "pack": "bundle"
 }
 ```
 
 From here on, you only need to run this command to bundle your app:
 
 ```bash
-npm run build
+npm run pack
 ```
 
 Easy as 🍰!
 
 ## Configuration
 
-By default, `pack` will work just fine without any addition configuration. However, you can add a property named `pack` to the `package.json` file of your application for changing the behaviour:
+By default, `bundle` will work just fine without any addition configuration. However, you can add a property named `bundle` to the `package.json` file of your application for changing the behaviour:
 
 ```json
-"pack": {
+"bundle": {
   "name": "Test"
 }
 ```
 
-It can hold the following properites (the dot in property names indicates a sub property):
+It can hold the following properties (the dot in property names indicates a sub property):
 
 | Property         | Description                                                                                                                                                                                                                                                            |
 |------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -66,11 +66,11 @@ It can hold the following properites (the dot in property names indicates a sub 
 ## Contributing
 
 1. [Fork](https://help.github.com/articles/fork-a-repo/) this repository to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your local device
-2. Uninstall `pack` if it's already installed: `npm uninstall -g pack`
+2. Uninstall `bundle` if it's already installed: `npm uninstall -g bundle`
 3. Link it to the global module directory by running this command in the repo directory: `npm link`
 
-After that, you can use the `pack` command everywhere!
+After that, you can use the `bundle` command everywhere!
 
 ## Author
 
-Leo Lamprecht ([@notquiteleo](https://twitter.com/notquiteleo)) - [▲ZEIT](https://zeit.co)
+Leo Lamprecht ([@notquiteleo](https://twitter.com/notquiteleo)) - [ZEIT](https://zeit.co)
