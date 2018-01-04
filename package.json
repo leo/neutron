@@ -1,7 +1,7 @@
 {
   "name": "bundle",
   "version": "1.1.1",
-  "description": "Distribute Electron applications built with Next.js",
+  "description": "The easiest (yet most scalable) way to build Electron apps",
   "repository": "leo/bundle",
   "bin": {
     "bundle": "./bin/bundle.js"
