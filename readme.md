@@ -8,11 +8,11 @@ While the [main process](https://electronjs.org/docs/tutorial/quick-start#main-p
 
 ## Features
 
-- **Create a new app with a single command:** The only thing you need to do in order to create a new boilerplate with everything necessary already installed is running `neutron init`. That's all.
+- **Create a New App with a Single Command:** The only thing you need to do in order to create a new boilerplate with everything necessary already installed is running `neutron init`. That's all.
 
-- **Compiler included:** Once you've finished developing your application, the `neutron build` command is the only thing needed for generating application bundles (`.app` for macOS, `.exe` for Windows, etc).
+- **Compiler Included:** Once you've finished developing your application, the `neutron build` command is the only thing needed for generating application bundles (`.app` for macOS, `.exe` for Windows, etc).
 
-- **No need to set up any tooling:** Things like hot code reloading, transpiling and bundling are all taken care of in the places where they're needed. No further tools required.
+- **No Need to Set up Any Tooling:** Things like hot code reloading, transpiling and bundling are all taken care of in the places where they're needed. No further tools required.
 
 Isn't that magical? 💫
 
