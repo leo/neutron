@@ -28,6 +28,14 @@ npx neutron init
 
 That's it – now follow the instructions shown! 🚀
 
+## Commands & Options
+
+To get a list of all available sub commands and options, run this command:
+
+```bash
+neutron help
+```
+
 ## Configuration
 
 By default, `neutron` will work just fine without any addition configuration. However, you can add a property named `neutron` to the `package.json` file of your application for changing the behaviour:
