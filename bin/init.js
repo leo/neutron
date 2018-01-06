@@ -5,9 +5,11 @@ const { promisify } = require('util')
 
 // Packages
 const fs = require('fs-extra')
+const parse = require('arg')
 
 // Utilities
-const spinner = require('../log/spinner')
+const spinner = require('../lib/log/spinner')
+const help = require('../lib/log/help')
 
 const checkExistance = async (target, name) => {
   // Check if the directory is there
@@ -84,8 +86,21 @@ const installDependencies = async cwd => {
   }
 }
 
-module.exports = async name => {
-  const origin = join(__dirname, '..', '..', 'template')
+// Parse the supplied commands and options
+const { _: sub, ...args } = parse({
+  '--help': Boolean,
+  '-h': '--help'
+})
+
+module.exports = async () => {
+  const name = sub[1] || 'my-app'
+
+  if (args['--help']) {
+    console.log(help.init)
+    process.exit(0)
+  }
+
+  const origin = join(__dirname, '..', 'template')
   const target = join(process.cwd(), name)
 
   // Check whether the target directory already exists

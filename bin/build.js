@@ -5,7 +5,6 @@ const { resolve, basename } = require('path')
 
 // Packages
 const parse = require('arg')
-const { pathExists } = require('fs-extra')
 
 // Utilities
 const package = require('../package')
@@ -15,45 +14,22 @@ const clean = require('../lib/actions/clean')
 const setInfo = require('../lib/actions/set-info')
 const createBundle = require('../lib/actions/bundle')
 const getConfig = require('../lib/config')
-const generateBoilerplate = require('../lib/actions/init')
 const spinner = require('../lib/log/spinner')
 
-const { _, ...args } = parse({
-  '--version': Boolean,
+// Parse the supplied commands and options
+const { _: sub, ...args } = parse({
   '--help': Boolean,
   '--output': String,
-  '-v': '--version',
   '-h': '--help',
   '-o': '--output'
 })
 
-const subSpec = [ 'help', 'init' ]
-const sub = subSpec[subSpec.indexOf(_[0])]
+module.exports = async () => {
+  const cwd = process.cwd()
 
-const main = async () => {
-  let cwd = process.cwd()
-
-  if (!sub && _[0]) {
-    const resolved = resolve(cwd, _[0])
-
-    if (await pathExists(resolved)) {
-      cwd = resolved
-    }
-  }
-
-  if (args['--version']) {
-    console.log(package.version)
+  if (args['--help']) {
+    console.log(help.build)
     process.exit(0)
-  }
-
-  if (args['--help'] || sub === 'help') {
-    console.log(help)
-    process.exit(0)
-  }
-
-  if (sub === 'init') {
-    generateBoilerplate(_[1] || 'my-app')
-    return
   }
 
   const output = resolve(cwd, args['--output'] || 'out')
@@ -75,6 +51,3 @@ const main = async () => {
   const directory = basename(output)
   spinner.clear(`You can find your bundled app in "${directory}".`)
 }
-
-// Let's rock this
-main()

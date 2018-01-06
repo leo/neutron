@@ -4,7 +4,7 @@
   "description": "The easiest (yet most scalable) way to build Electron apps",
   "repository": "leo/neutron",
   "bin": {
-    "neutron": "./bin/neutron.js"
+    "neutron": "./bin/index.js"
   },
   "keywords": [
     "electron",
