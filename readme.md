@@ -58,7 +58,7 @@ It can hold the following properties (the dot in property names indicates a sub 
 
 ## Badge
 
-Do you want to help us spread the word? Feel free to add this badge to your repository!
+Do you want to help us spread the word? Feel free to add this badge to your repository:
 
 [![badge][neutron-badge]][neutron-link]
 
