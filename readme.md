@@ -56,6 +56,23 @@ It can hold the following properties (the dot in property names indicates a sub 
 | `macOS.category` | The type of application you're building ([possible values](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html#//apple_ref/doc/uid/TP40009250-SW8)).                                                |
 | `macOS.info`     | This property lets you extend the information contained within the `Info.plist` files in your bundle. It holds an object made of key value pairs to include in those files. As an example, adding `LSUIElement` with a value of  `1` would hide the dock icon forever.             |
 
+## Badge
+
+Do you want to help us spread the word? Feel free to add this badge to your repository!
+
+![badge](https://img.shields.io/badge/built%20with-neutron-red.svg?style=flat)
+
+Simply embed this markdown code in your `readme.md` file:
+
+```markdown
+<!-- Next to the top heading -->
+[![badge][neutron-badge]][neutron-link]
+
+<!-- At the bottom of the file -->
+[neutron-badge]: https://img.shields.io/badge/built%20with-neutron-red.svg?style=flat
+[neutron-link]: https://github.com/zeit/neutron
+```
+
 ## Contributing
 
 1. [Fork](https://help.github.com/articles/fork-a-repo/) this repository to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your local device
