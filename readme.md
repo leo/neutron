@@ -68,7 +68,7 @@ Do you want to help us spread the word? Feel free to add this badge to your repo
 Simply embed this markdown code in your `readme.md` file:
 
 ```markdown
-<!-- Next to the top heading -->
+<!-- Below or next to the top heading -->
 [![badge][neutron-badge]][neutron-link]
 
 <!-- At the bottom of the file -->
