@@ -1,57 +1,39 @@
-# bundle
+# neutron
 
-This is an opinionated approach to packaging Electron applications for distribution. It's specifically crafted for bundling applications built with Next.js ([electron-next](https://github.com/leo/electron-next)), which allows for the most minimal amount of configuration and the maximum of performance.
+This package provides you with a belt full of all the tools you need for building a [Electron](https://electronjs.org) application.
 
-As an example, these are **all the commands you'll ever need**:
+Aside from making the creation of a new application as easy as baking 🥞, it even ensures you won't get any trouble when the codebase gets huge.
 
-- `bundle init` generates a new boilerplate
-- `bundle start` or `npm start` runs your app for development
-- `bundle` compiles your final app bundle
+While the [main process](https://electronjs.org/docs/tutorial/quick-start#main-process) is kept free from any form of transpilation setup (since [Electron](https://electronjs.org) ships with a up-to-date version of [Node.js](https://nodejs.org/en/)), the [renderer process](https://electronjs.org/docs/tutorial/quick-start#renderer-process) is backed by [Next.js](https://github.com/zeit/next.js), a framework for building React applications which has already seen tremendous growth and acceptance among the community.
+
+## Features
+
+- **Create a new app with a single command:** The only thing you need to do in order to create a new boilerplate with everything necessary already installed is running `neutron init`. That's all.
+
+- **Compiler included:** Once you've finished developing your application, the `neutron build` command is the only thing needed for generating application bundles (`.app` for macOS, `.exe` for Windows, etc).
+
+- **No need to set up any tooling:** Things like hot code reloading, transpiling and bundling are all taken care of in the places where they're needed. No further tools required.
 
 Isn't that magical? 💫
 
-If you aren't familiar with the concept of such applications yet, read [this post](https://leo.im/2017/electron-next) – it will guide you through the reasoning behind it. In the case that you are (or just want to give it a shot), read on.
+No matter if you're already familiar with the concept of building Electron applications backed by Next.js or not, I highly recommend at least giving it a shot. Just read on, it's very easy!
 
 ## Get Started
 
-In the case that you want to build a new application, run this command:
+To create a fresh app, you only need to have [Node.js](https://nodejs.org/en/) installed. Then run this command:
 
 ```bash
-npx bundle init
+npx neutron init
 ```
 
-That's it!
-
-## Existing App
-
-If you already have a working application into which [electron-next](https://leo.im/2017/electron-next) was implemented, simply install the package as a local dependency for development...
-
-```bash
-npm install bundle
-```
-
-And then add a new [npm script](https://docs.npmjs.com/misc/scripts) like this:
-
-```json
-"scripts": {
-  "pack": "bundle"
-}
-```
-
-From here on, you only need to run this command to bundle your app:
-
-```bash
-npm run pack
-```
-
-Easy as 🍰!
+That's it – now follow the instructions shown! 🚀
 
 ## Configuration
 
-By default, `bundle` will work just fine without any addition configuration. However, you can add a property named `bundle` to the `package.json` file of your application for changing the behaviour:
+By default, `neutron` will work just fine without any addition configuration. However, you can add a property named `neutron` to the `package.json` file of your application for changing the behaviour:
 
 ```json
-"bundle": {
+"neutron": {
   "name": "Test"
 }
 ```
@@ -68,10 +50,10 @@ It can hold the following properties (the dot in property names indicates a sub 
 ## Contributing
 
 1. [Fork](https://help.github.com/articles/fork-a-repo/) this repository to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your local device
-2. Uninstall `bundle` if it's already installed: `npm uninstall -g bundle`
+2. Uninstall `neutron` if it's already installed: `npm uninstall -g neutron`
 3. Link it to the global module directory by running this command in the repo directory: `npm link`
 
-After that, you can use the `bundle` command everywhere!
+After that, you can use the `neutron` command everywhere!
 
 ## Author
 
