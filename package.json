@@ -1,11 +1,11 @@
 {
-  "name": "bundle",
+  "name": "neutron",
   "version": "2.0.1",
   "preferGlobal": true,
   "description": "The easiest (yet most scalable) way to build Electron apps",
-  "repository": "leo/bundle",
+  "repository": "leo/neutron",
   "bin": {
-    "bundle": "./bin/bundle.js"
+    "neutron": "./bin/neutron.js"
   },
   "keywords": [
     "electron",
