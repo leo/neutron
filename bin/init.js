@@ -81,7 +81,7 @@ const installDependencies = async cwd => {
     return
   }
 
-  if (stderr) {
+  if (stderr && !stderr.includes('npm WARN')) {
     spinner.fail(`An error occurred: ${stderr}`)
   }
 }

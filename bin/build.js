@@ -7,7 +7,6 @@ const { resolve, basename } = require('path')
 const parse = require('arg')
 
 // Utilities
-const package = require('../package')
 const help = require('../lib/log/help')
 const prepareBase = require('../lib/actions/pull')
 const clean = require('../lib/actions/clean')
