@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "main/index.js",
   "license": "MIT",
+  "repository": "zeit/neutron",
   "scripts": {
     "dev": "neutron",
     "start": "neutron start",
@@ -12,6 +13,7 @@
     "name": "My App"
   },
   "devDependencies": {
+    "electron": "^1.7.10",
     "neutron": "^0.0.3",
     "next": "^4.2.1",
     "react": "^16.2.0",
