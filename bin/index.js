@@ -5,8 +5,8 @@ const parse = require('arg')
 
 // Utilities
 const package = require('../package')
-const spinner = require('../lib/log/spinner')
-const help = require('../lib/log/help')
+const spinner = require('../lib/spinner')
+const help = require('../lib/help')
 
 // Parse the supplied commands and options
 const { _: sub, ...args } = parse({

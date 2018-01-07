@@ -7,13 +7,13 @@ const { resolve, basename } = require('path')
 const parse = require('arg')
 
 // Utilities
-const help = require('../lib/log/help')
-const prepareBase = require('../lib/actions/pull')
-const clean = require('../lib/actions/clean')
-const setInfo = require('../lib/actions/set-info')
-const createBundle = require('../lib/actions/bundle')
+const help = require('../lib/help')
+const prepareBase = require('../lib/build/pull')
+const clean = require('../lib/build/clean')
+const setInfo = require('../lib/build/set-info')
+const createBundle = require('../lib/build/bundle')
 const getConfig = require('../lib/config')
-const spinner = require('../lib/log/spinner')
+const spinner = require('../lib/spinner')
 
 // Parse the supplied commands and options
 const { _: sub, ...args } = parse({
