@@ -18,6 +18,11 @@ const { _: sub, ...args } = parse({
 })
 
 module.exports = async () => {
+  const children = [
+    'next',
+    'electron'
+  ]
+
   if (args['--help']) {
     console.log(help.dev)
     process.exit(0)
@@ -27,7 +32,7 @@ module.exports = async () => {
     // Once Next.js has started serving on a port, we
     // can start Electron. If we do it before, the
     // pages won't render properly.
-    cluster.on('listening', runElectron)
+    cluster.on('listening', () => cluster.fork())
 
     // Create a child process for Next.js to run in
     cluster.fork()
@@ -36,6 +41,12 @@ module.exports = async () => {
     return
   }
 
-  // In the forked-out child process, run Next.js
-  runNext()
+  const { id } = cluster.worker
+  const type = children[id - 1]
+
+  if (type === 'next') {
+    runNext()
+  } else if (type === 'electron') {
+    runElectron()
+  }
 }
