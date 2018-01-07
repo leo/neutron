@@ -33,7 +33,13 @@ That's it – now follow the instructions shown! 🚀
 To get a list of all available sub commands and options, run this command:
 
 ```bash
-neutron help
+neutron --help
+```
+
+This also works for sub commands. Here's an example for `build`:
+
+```bash
+neutron build --help
 ```
 
 ## Configuration
