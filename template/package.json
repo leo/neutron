@@ -1,7 +1,6 @@
 {
   "name": "my-app",
   "version": "1.0.0",
-  "main": "main/index.js",
   "license": "MIT",
   "repository": "zeit/neutron",
   "scripts": {
