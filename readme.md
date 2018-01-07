@@ -68,7 +68,7 @@ Do you want to help us spread the word? Feel free to add this badge to your repo
 
 [![badge][neutron-badge]][neutron-link]
 
-[neutron-badge]: https://img.shields.io/badge/built%20with-neutron-red.svg?style=flat
+[neutron-badge]: https://img.shields.io/badge/built%20with-neutron-ff69b4.svg?style=flat
 [neutron-link]: https://github.com/zeit/neutron
 
 Simply embed this markdown code in your `readme.md` file:
@@ -78,7 +78,7 @@ Simply embed this markdown code in your `readme.md` file:
 [![badge][neutron-badge]][neutron-link]
 
 <!-- At the bottom of the file -->
-[neutron-badge]: https://img.shields.io/badge/built%20with-neutron-red.svg?style=flat
+[neutron-badge]: https://img.shields.io/badge/built%20with-neutron-ff69b4.svg?style=flat
 [neutron-link]: https://github.com/zeit/neutron
 ```
 
