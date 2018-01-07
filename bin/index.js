@@ -32,10 +32,8 @@ if (args['--version']) {
 // the main process code directly), we need
 // to ensure to fall back to `dev` in those cases
 
-// The same happens if no sub command was defined and
-// by checking if `dev` was supplied, we also make
-// sure to log the same usage information in all cases
-if (!run || run === 'start' || run === 'dev') {
+// The same happens if no sub command was defined
+if (!run || run === 'start') {
   run = 'dev'
 
   if (args['--help']) {
