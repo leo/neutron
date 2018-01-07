@@ -42,5 +42,5 @@ module.exports = async () => {
   // Run `npm install` inside the boilerplate
   await installDependencies(target)
 
-  spinner.clear(`Run \`npm start\` inside of "${name}" to start the app`)
+  spinner.clear(`Run \`npm run dev\` inside of "${name}" to start the app`)
 }
