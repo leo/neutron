@@ -2,14 +2,10 @@
   "name": "my-app",
   "version": "1.0.0",
   "main": "./main/index.js",
-  "license": "MIT",
-  "repository": "zeit/neutron",
+  "private": true,
   "scripts": {
     "dev": "neutron",
     "build": "neutron build"
-  },
-  "neutron": {
-    "name": "My App"
   },
   "devDependencies": {
     "electron": "^1.7.10",
