@@ -6,7 +6,6 @@
   "repository": "zeit/neutron",
   "scripts": {
     "dev": "neutron",
-    "start": "neutron start",
     "build": "neutron build"
   },
   "neutron": {
