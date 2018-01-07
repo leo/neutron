@@ -8,8 +8,8 @@ const parse = require('arg')
 
 // Utilities
 const help = require('../lib/help')
-const runElectron = require('../lib/dev/electron')
-const runNext = require('../lib/dev/next')
+const prepareRenderer = require('../lib/dev/renderer')
+const runMain = require('../lib/dev/main')
 
 // Parse the supplied commands and options
 const { _: sub, ...args } = parse({
@@ -45,8 +45,8 @@ module.exports = async () => {
   const type = children[id - 1]
 
   if (type === 'next') {
-    runNext()
+    prepareRenderer()
   } else if (type === 'electron') {
-    runElectron()
+    runMain()
   }
 }
