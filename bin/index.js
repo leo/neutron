@@ -38,7 +38,13 @@ if (!sub[0]) {
 try {
   require(`./${sub[0]}.js`)()
 } catch (err) {
-  console.log(err)
+  // Ensure missing modules from required files
+  // still lead to an error
+  if (!err.stack.includes('bin/index')) {
+    throw err
+    return
+  }
+
   // If it wasn't possible, we might not support it
   if (err.code === 'MODULE_NOT_FOUND') {
     spinner.fail('The specified sub command is not supported')
