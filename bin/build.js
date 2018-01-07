@@ -14,6 +14,7 @@ const setInfo = require('../lib/build/set-info')
 const createBundle = require('../lib/build/bundle')
 const getConfig = require('../lib/config')
 const spinner = require('../lib/spinner')
+const exportRenderer = require('../lib/build/export')
 
 // Parse the supplied commands and options
 const { _: sub, ...args } = parse({
@@ -33,6 +34,9 @@ module.exports = async () => {
 
   const output = resolve(cwd, args['--output'] || 'out')
   const config = await getConfig(cwd)
+
+  // Build and export the renderer code
+  await exportRenderer()
 
   // Ensure we can start fresh by cleaning up the old output
   await clean(output)
