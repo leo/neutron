@@ -28,6 +28,13 @@ npx neutron init
 
 That's it – now follow the instructions shown! 🚀
 
+**To be clear:** If your friend (who hasn't developed any mac applications at all yet) wants to get started with building such applications, these are litterally the only steps to follow:
+
+1. Buy computer
+2. Install [Node.js](https://nodejs.org/en/)
+3. Run `npx neutron init`
+4. 🎉
+
 ## Commands & Options
 
 To get a list of all available sub commands and options, run this command:
