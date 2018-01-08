@@ -12,7 +12,7 @@ While the [main process](https://electronjs.org/docs/tutorial/quick-start#main-p
 
 - **Compiler Included:** Once you've finished developing your application, the `neutron build` command is the only thing needed for generating application bundles (`.app` for macOS, `.exe` for Windows, etc).
 
-- **No Need to Set up Any Tooling:** Things like hot code reloading, transpiling and bundling are all taken care of in the places where they're needed. No further tools required, just run `neutron`.
+- **No Need to Set up Any Tooling:** Things like hot code reloading, transpiling and bundling are all taken care of. No further tools required, just run `neutron`.
 
 Isn't that magical? 💫
 
