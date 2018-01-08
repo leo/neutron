@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "electron": "^1.7.10",
-    "neutron": "^0.0.3",
+    "neutron": "latest",
     "next": "^4.2.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
