@@ -1,7 +1,9 @@
 # neutron
 
 ---
+
 Still in beta, will be announced once fully stable (ask [@leo](https://github.com/leo)).
+
 ---
 
 This package provides you with a belt full of all the tools you need for building a [Electron](https://electronjs.org) application.
