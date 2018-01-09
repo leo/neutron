@@ -1,5 +1,9 @@
 # neutron
 
+---
+Still in beta, will be announced once fully stable (ask [@leo](https://github.com/leo)).
+---
+
 This package provides you with a belt full of all the tools you need for building a [Electron](https://electronjs.org) application.
 
 Aside from making the creation of a new application as easy as baking 🥞, it even ensures you won't get any trouble when the codebase gets huge.
