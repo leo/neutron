@@ -15,6 +15,7 @@ const createBundle = require('../lib/build/bundle')
 const getConfig = require('../lib/config')
 const spinner = require('../lib/spinner')
 const exportRenderer = require('../lib/build/export')
+const compress = require('../lib/build/compress')
 
 // Parse the supplied commands and options
 const { _: sub, ...args } = parse({
@@ -48,7 +49,10 @@ module.exports = async () => {
   await setInfo(output, config)
 
   // Bundle all the application into an `.asar` archive
-  await createBundle(cwd, output, config)
+  const bundle = await createBundle(cwd, output, config)
+
+  // Create a ZIP archive from the bundle
+  await compress(output, bundle, config)
 
   // Let the user know we're done
   const directory = basename(output)
