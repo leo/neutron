@@ -40,7 +40,8 @@ module.exports = async () => {
   await setMeta(target, name)
 
   // Run `npm install` inside the boilerplate
-  await installDependencies(target)
+  const manager = await installDependencies(target)
 
-  spinner.clear(`Run \`npm run dev\` inside of "${name}" to start the app`)
+  const command = manager === 'yarn' ? 'yarn dev' : 'npm run dev'
+  spinner.clear(`Run \`${command}\` inside of "${name}" to start the app`)
 }
