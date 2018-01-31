@@ -98,8 +98,8 @@ Simply embed this markdown code in your `readme.md` file:
 ## Contributing
 
 1. [Fork](https://help.github.com/articles/fork-a-repo/) this repository to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your local device
-2. Uninstall `neutron` if it's already installed: `npm uninstall -g neutron`
-3. Link it to the global module directory by running this command in the repo directory: `npm link`
+2. Uninstall `neutron` if it's already installed: `yarn global remove neutron`
+3. Link it to the global module directory by running this command in the repo directory: `yarn link`
 
 After that, you can use the `neutron` command everywhere!
 
