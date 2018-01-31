@@ -19,10 +19,12 @@ const compress = require('../lib/build/compress')
 
 // Parse the supplied commands and options
 const { _: sub, ...args } = parse({
+  '--zip': Boolean,
   '--help': Boolean,
   '--output': String,
   '-h': '--help',
-  '-o': '--output'
+  '-o': '--output',
+  '-z': '--zip'
 })
 
 module.exports = async () => {
@@ -31,6 +33,12 @@ module.exports = async () => {
   if (args['--help']) {
     console.log(help.build)
     process.exit(0)
+  }
+
+  // On CI services, we should always
+  // compress into ZIP archives by default
+  if (process.env.CI) {
+    args['--zip'] = true
   }
 
   const output = resolve(cwd, args['--output'] || 'out')
@@ -51,8 +59,10 @@ module.exports = async () => {
   // Bundle all the application into an `.asar` archive
   const bundle = await createBundle(cwd, output, config)
 
-  // Create a ZIP archive from the bundle
-  await compress(output, bundle, config)
+  if (args['--zip']) {
+    // Create a ZIP archive from the bundle
+    await compress(output, bundle, config)
+  }
 
   // Let the user know we're done
   const directory = basename(output)

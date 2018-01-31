@@ -11,10 +11,14 @@ const help = require('../lib/help')
 
 // Parse the supplied commands and options
 const { _, ...args } = parse({
+  '--zip': Boolean,
   '--version': Boolean,
   '--help': Boolean,
+  '--output': String,
   '-v': '--version',
-  '-h': '--help'
+  '-h': '--help',
+  '-o': '--output',
+  '-z': '--zip'
 })
 
 // Check if a sub command was supplied
