@@ -26,6 +26,7 @@
     "chokidar": "2.0.0",
     "dashify": "1.0.0",
     "dot-prop": "4.2.0",
+    "electron-installer-dmg": "0.2.1",
     "electron-is-dev": "0.3.0",
     "fs-extra": "5.0.0",
     "globby": "7.1.1",

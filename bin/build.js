@@ -5,6 +5,7 @@ const { resolve, basename } = require('path')
 
 // Packages
 const parse = require('arg')
+const { remove } = require('fs-extra')
 
 // Utilities
 const help = require('../lib/help')
@@ -16,19 +17,21 @@ const getConfig = require('../lib/config')
 const spinner = require('../lib/spinner')
 const exportRenderer = require('../lib/build/export')
 const compress = require('../lib/build/compress')
+const createInstaller = require('../lib/build/installer')
 
 // Parse the supplied commands and options
 const { _: sub, ...args } = parse({
-  '--zip': Boolean,
+  '--production': Boolean,
   '--help': Boolean,
   '--output': String,
   '-h': '--help',
   '-o': '--output',
-  '-z': '--zip'
+  '-p': '--production'
 })
 
 module.exports = async () => {
   const cwd = process.cwd()
+  const { NODE_ENV, CI } = process.env
 
   if (args['--help']) {
     console.log(help.build)
@@ -36,9 +39,9 @@ module.exports = async () => {
   }
 
   // On CI services, we should always
-  // compress into ZIP archives by default
-  if (process.env.CI) {
-    args['--zip'] = true
+  // generate the distribution bundles
+  if (CI || NODE_ENV === 'production') {
+    args['--production'] = true
   }
 
   const output = resolve(cwd, args['--output'] || 'out')
@@ -59,9 +62,13 @@ module.exports = async () => {
   // Bundle all the application into an `.asar` archive
   const bundle = await createBundle(cwd, output, config)
 
-  if (args['--zip']) {
-    // Create a ZIP archive from the bundle
+  if (args['--production']) {
+    // Create archive and installers from the bundle
     await compress(output, bundle, config)
+    await createInstaller(output, bundle, config)
+
+    // Delete the original
+    await remove(bundle)
   }
 
   // Let the user know we're done
