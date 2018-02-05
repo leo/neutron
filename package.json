@@ -1,6 +1,6 @@
 {
   "name": "neutron",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "description": "The easiest (yet most scalable) way to build Electron apps",
   "repository": "zeit/neutron",
   "main": "./lib/index.js",
