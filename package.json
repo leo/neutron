@@ -35,5 +35,11 @@
     "plist": "2.1.0",
     "resolve-binary": "1.0.1",
     "respawn": "2.5.0"
+  },
+  "peerDependencies": {
+    "electron": "1.x",
+    "next": "5.x",
+    "react": "16.x",
+    "react-dom": "16.x"
   }
 }
