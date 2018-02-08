@@ -66,7 +66,7 @@ module.exports = async () => {
   if (args['--production'] || isWin) {
     // Create archive and installers from the bundle
     await compress(output, bundle, config)
-    await createInstaller(output, bundle, config)
+    await createInstaller(output, bundle, config, cwd)
 
     // Delete the original
     await remove(bundle)
