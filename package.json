@@ -33,7 +33,6 @@
     "inquirer": "5.1.0",
     "ora": "1.4.0",
     "plist": "2.1.0",
-    "resolve-binary": "1.0.1",
     "respawn": "2.5.0"
   },
   "peerDependencies": {

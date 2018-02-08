@@ -731,10 +731,6 @@ fill-range@^4.0.0:
     repeat-string "^1.6.1"
     to-regex-range "^2.1.0"
 
-find-parent-dir@~0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/find-parent-dir/-/find-parent-dir-0.3.0.tgz#33c44b429ab2b2f0646299c5f9f718f376ff8d54"
-
 fmix@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/fmix/-/fmix-0.1.0.tgz#c7bbf124dec42c9d191cfb947d0a9778dd986c0c"
@@ -1981,12 +1977,6 @@ require-object-coercible-x@^1.4.1:
   resolved "https://registry.yarnpkg.com/require-object-coercible-x/-/require-object-coercible-x-1.4.1.tgz#75b9fb5bda2d15cf705a5714f108e8b40ca3eb2e"
   dependencies:
     is-nil-x "^1.4.1"
-
-resolve-binary@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/resolve-binary/-/resolve-binary-1.0.1.tgz#528fbf19cb1bc34c10e64747092b0abd8d0773b9"
-  dependencies:
-    find-parent-dir "~0.3.0"
 
 resolve-url@^0.2.1:
   version "0.2.1"
