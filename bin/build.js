@@ -56,6 +56,8 @@ module.exports = async () => {
   // But the pre-built Electron binary into place
   await prepareBase(output)
 
+  process.exit(0)
+
   // Prepare the meta files and name everything correctly
   await setInfo(output, config)
 
