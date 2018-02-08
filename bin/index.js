@@ -51,8 +51,9 @@ try {
   require(`./${run}.js`)()
 } catch (err) {
   // Ensure missing modules from required files
-  // still lead to an error
-  if (!err.stack.includes('bin/index')) {
+  // still lead to an error. Don't use a slash
+  // in here, otherwise it breaks on Windows.
+  if (!err.stack.includes('index.js')) {
     throw err
   }
 
