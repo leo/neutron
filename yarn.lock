@@ -140,6 +140,18 @@ arrify@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/arrify/-/arrify-1.0.1.tgz#898508da2226f380df904728456849c1501a4b0d"
 
+asar@0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/asar/-/asar-0.11.0.tgz#b926e792c315f8c048c43371e325b09c97a76464"
+  dependencies:
+    chromium-pickle-js "^0.1.0"
+    commander "^2.9.0"
+    cuint "^0.2.1"
+    glob "^6.0.4"
+    minimatch "^3.0.0"
+    mkdirp "^0.5.0"
+    mksnapshot "^0.3.0"
+
 asar@0.14.1:
   version "0.14.1"
   resolved "https://registry.yarnpkg.com/asar/-/asar-0.14.1.tgz#30002f12161024f7424e0e0ece8b6a78cb5cc999"
@@ -259,6 +271,10 @@ block-stream@*:
   resolved "https://registry.yarnpkg.com/block-stream/-/block-stream-0.0.9.tgz#13ebfe778a03205cfe03751481ebb4b3300c126a"
   dependencies:
     inherits "~2.0.0"
+
+bluebird@^3.1.1:
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.1.tgz#d9551f9de98f1fcda1e683d17ee91a0602ee2eb9"
 
 boom@2.x.x:
   version "2.10.1"
@@ -381,6 +397,10 @@ chokidar@2.0.0:
     readdirp "^2.0.0"
   optionalDependencies:
     fsevents "^1.0.0"
+
+chromium-pickle-js@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/chromium-pickle-js/-/chromium-pickle-js-0.1.0.tgz#1d48b107d82126a2f3e211c2ea25f803ba551b21"
 
 chromium-pickle-js@^0.2.0:
   version "0.2.0"
@@ -596,6 +616,10 @@ dot-prop@4.2.0:
   dependencies:
     is-obj "^1.0.0"
 
+dot@^1.0.3:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/dot/-/dot-1.1.2.tgz#c7377019fc4e550798928b2b9afeb66abfa1f2f9"
+
 ds-store@^0.1.5:
   version "0.1.6"
   resolved "https://registry.yarnpkg.com/ds-store/-/ds-store-0.1.6.tgz#d1024ef746ed0c13f0f7fec85c7e858e8c4b7ca7"
@@ -622,6 +646,16 @@ electron-installer-dmg@0.2.1:
 electron-is-dev@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/electron-is-dev/-/electron-is-dev-0.3.0.tgz#14e6fda5c68e9e4ecbeff9ccf037cbd7c05c5afe"
+
+electron-windows-installer@1.7.8:
+  version "1.7.8"
+  resolved "https://registry.yarnpkg.com/electron-windows-installer/-/electron-windows-installer-1.7.8.tgz#830f794c51d21ae127ffda22092692374509e244"
+  dependencies:
+    asar "0.11.0"
+    bluebird "^3.1.1"
+    dot "^1.0.3"
+    fs-extra "^0.26.3"
+    temp "^0.8.3"
 
 end-of-stream@^1.0.0:
   version "1.4.1"
@@ -767,7 +801,7 @@ fragment-cache@^0.2.1:
   dependencies:
     map-cache "^0.2.2"
 
-fs-extra@0.26.7:
+fs-extra@0.26.7, fs-extra@^0.26.3:
   version "0.26.7"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-0.26.7.tgz#9ae1fdd94897798edab76d0918cf42d0c3184fa9"
   dependencies:
@@ -2002,6 +2036,10 @@ rimraf@2, rimraf@^2.2.8, rimraf@^2.5.1, rimraf@^2.6.1:
   dependencies:
     glob "^7.0.5"
 
+rimraf@~2.2.6:
+  version "2.2.8"
+  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.2.8.tgz#e439be2aaee327321952730f99a8929e4fc50582"
+
 run-async@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-2.3.0.tgz#0371ab4ae0bdd720d4166d7dfda64ff7a445a6c0"
@@ -2238,6 +2276,13 @@ tar@^2.2.1:
     block-stream "*"
     fstream "^1.0.2"
     inherits "2"
+
+temp@^0.8.3:
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/temp/-/temp-0.8.3.tgz#e0c6bc4d26b903124410e4fed81103014dfc1f59"
+  dependencies:
+    os-tmpdir "^1.0.0"
+    rimraf "~2.2.6"
 
 through@^2.3.6:
   version "2.3.8"

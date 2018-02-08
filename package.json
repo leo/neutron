@@ -28,6 +28,7 @@
     "dot-prop": "4.2.0",
     "electron-installer-dmg": "0.2.1",
     "electron-is-dev": "0.3.0",
+    "electron-windows-installer": "1.7.8",
     "fs-extra": "5.0.0",
     "globby": "7.1.1",
     "inquirer": "5.1.0",

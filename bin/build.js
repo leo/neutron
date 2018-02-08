@@ -31,6 +31,7 @@ const { _: sub, ...args } = parse({
 
 module.exports = async () => {
   const cwd = process.cwd()
+  const isWin = process.platform === 'win32'
   const { NODE_ENV, CI } = process.env
 
   if (args['--help']) {
@@ -56,15 +57,13 @@ module.exports = async () => {
   // But the pre-built Electron binary into place
   await prepareBase(output)
 
-  process.exit(0)
-
   // Prepare the meta files and name everything correctly
   await setInfo(output, config)
 
   // Bundle all the application into an `.asar` archive
   const bundle = await createBundle(cwd, output, config)
 
-  if (args['--production']) {
+  if (args['--production'] || isWin) {
     // Create archive and installers from the bundle
     await compress(output, bundle, config)
     await createInstaller(output, bundle, config)
