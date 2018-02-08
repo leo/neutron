@@ -87,11 +87,12 @@ It can hold the following properties (the dot in property names indicates a sub 
 
 ### Windows
 
-| Property             | Description                                                                                                                                                                                                                                                                        |
-|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `windows.msi`        | By default, a `.exe` installer without any wizard steps will be generated. If you want to also receive a [MS installer](https://en.wikipedia.org/wiki/Windows_Installer) in addition, you can set this option to `true`.                                                           |
-| `windows.loadingGIF` | A custom path to a GIF that shows while your Windows application is being installed using the `.exe` installer (relative to working directory).                                                                                                                                    |
-| `windows.icon`       | The path to a `.ico` file, which acts as the icon of your Windows application (relative to working directory).                                                                                                                                                                     |
+| Property             | Description                                                                                                                                                                                                                         |
+|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `windows.msi`        | By default, a `.exe` installer without any wizard steps will be generated. If you want to also receive a [MS installer](https://en.wikipedia.org/wiki/Windows_Installer) in addition, you can set this option to `true`.            |
+| `windows.loadingGIF` | A custom path to a GIF that shows while your Windows application is being installed using the `.exe` installer (relative to working directory).                                                                                     |
+| `windows.icon`       | The path to a `.ico` file, which acts as the icon of your Windows application (relative to working directory).                                                                                                                      |
+| `windows.setupIcon`  | By default, the installer for your Windows application will have the same icon as the application itself. If you want a separate one for it, this property can be set to the path to a `.ico` file (relative to working directory). |
 
 ## Badge
 
