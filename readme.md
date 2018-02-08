@@ -65,16 +65,18 @@ By default, `neutron` will work just fine without any addition configuration. Ho
 }
 ```
 
+**IMPORTANT:** All of these configuration properties are **optional**.
+
 It can hold the following properties (the dot in property names indicates a sub property):
 
-### General (all optional)
+### All Operating Systems
 
 | Property             | Description                                                                                                                                                                                                                                                                        |
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `name`               | Holds the name of your application on all platforms.                                                                                                                                                                                                                               |
 | `asar`               | By default, this is set to `true`, which bundles the application into an [ASAR archive](https://electronjs.org/docs/tutorial/application-packaging#using-asar-archives). Set it to `false` to disable it (can be useful for debugging, but should always be `true` in production). |
 
-### macOS (all optional)
+### macOS
 
 | Property             | Description                                                                                                                                                                                                                                                                        |
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -83,7 +85,7 @@ It can hold the following properties (the dot in property names indicates a sub 
 | `macOS.info`         | This property lets you extend the information contained within the `Info.plist` files in your bundle. It holds an object made of key value pairs to include in those files. As an example, adding `LSUIElement` with a value of  `1` would hide the dock icon forever.             |
 | `macOS.icon`         | The path to a `.icns` file, which acts as the icon of your macOS application (relative to working directory).                                                                                                                                                                      |
 
-### Windows (all optional)
+### Windows
 
 | Property             | Description                                                                                                                                                                                                                                                                        |
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
