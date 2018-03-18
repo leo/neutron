@@ -2,7 +2,7 @@
   "name": "neutron",
   "version": "2.6.3",
   "description": "The easiest (yet most scalable) way to build Electron apps",
-  "repository": "zeit/neutron",
+  "repository": "leo/neutron",
   "main": "./lib/index.js",
   "bin": {
     "neutron": "./bin/index.js"
