@@ -1,10 +1,7 @@
 ![](https://user-images.githubusercontent.com/6170607/37571896-3398bcc0-2ac0-11e8-9d44-d0abf86d75a8.png)
 
----
-
-Still in beta, will be announced once fully stable (ask [@leo](https://github.com/leo)).
-
----
+[![Build Status](https://travis-ci.org/zeit/serve.svg?branch=master)](https://travis-ci.org/zeit/serve)
+[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/zeit)
 
 This package provides you with a belt full of all the tools you need for building a [Electron](https://electronjs.org) application.
 
