@@ -33,6 +33,7 @@ module.exports = async () => {
   const cwd = process.cwd()
   const isWin = process.platform === 'win32'
   const { NODE_ENV, CI } = process.env
+  const { isTTY } = CI ? false : process.stdout
 
   if (args['--help']) {
     console.log(help.build)
@@ -74,5 +75,11 @@ module.exports = async () => {
 
   // Let the user know we're done
   const directory = basename(output)
+
+  if (!isTTY) {
+    // Print empty line to ensure output looks great
+    process.stdout.write('\n')
+  }
+
   spinner.clear(`You can find your bundled app in "${directory}".`)
 }
