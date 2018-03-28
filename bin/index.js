@@ -62,6 +62,7 @@ if (!run || run === 'start') {
 try {
   require(`./${run}.js`)()
 } catch (err) {
+  console.log(err)
   // Ensure missing modules from required files
   // still lead to an error. Don't use a slash
   // in here, otherwise it breaks on Windows.
