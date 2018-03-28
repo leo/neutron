@@ -18,6 +18,7 @@ const spinner = require('../lib/spinner')
 const exportRenderer = require('../lib/build/export')
 const compress = require('../lib/build/compress')
 const createInstaller = require('../lib/build/installer')
+const createRelease = require('../lib/build/release')
 
 // Parse the supplied commands and options
 const { _: sub, ...args } = parse({
@@ -73,13 +74,20 @@ module.exports = async () => {
     await remove(bundle)
   }
 
-  // Let the user know we're done
   const directory = basename(output)
+  let finalNotice = `You can find your bundled app in "${directory}"`
+
+  if (CI) {
+    await createRelease(output, config)
+
+    finalNotice = `The application bundle was uploaded successfully`
+    return
+  }
 
   if (!isTTY) {
     // Print empty line to ensure output looks great
     process.stdout.write('\n')
   }
 
-  spinner.clear(`You can find your bundled app in "${directory}".`)
+  spinner.clear(finalNotice)
 }
