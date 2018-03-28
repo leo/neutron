@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
+// Native
+const { platform } = require('os')
+
 // Packages
 const parse = require('arg')
 const { grey } = require('chalk')
@@ -29,6 +32,15 @@ let run = _[0]
 if (args['--version']) {
   console.log(package.version)
   process.exit(0)
+}
+
+const supportedPlatforms = new Set([
+  'win32',
+  'darwin'
+])
+
+if (!supportedPlatforms.has(platform())) {
+  spinner.fail('This platform is not yet supported')
 }
 
 // As there's no sub command needed for starting the
