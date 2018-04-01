@@ -33,6 +33,7 @@
     "fs-extra": "5.0.0",
     "globby": "7.1.1",
     "inquirer": "5.1.0",
+    "mime-types": "2.1.18",
     "ora": "1.4.0",
     "plist": "2.1.0",
     "respawn": "2.5.0"
