@@ -17,6 +17,8 @@ While the [main process](https://electronjs.org/docs/tutorial/quick-start#main-p
 
 - **No Need to Set up Any Tooling:** Things like hot code reloading, transpiling and bundling are all taken care of. No further tools required, just run `neutron`.
 
+- **Releases Handled Properly:** After you ran [release](https://github.com/zeit/release) to create a new GitHub Release, Neutron will automatically upload the application bundles to it (works with [Circle CI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/) and [Travis CI](https://travis-ci.org/)).
+
 Isn't that magical? 💫
 
 No matter if you're already familiar with the concept of building Electron applications backed by Next.js or not, I highly recommend at least giving it a shot. Just read on, it's very easy!
