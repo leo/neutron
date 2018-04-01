@@ -79,7 +79,7 @@ module.exports = async () => {
 
   if (CI) {
     await createRelease(output, config)
-    finalNotice = `The application bundle was uploaded successfully`
+    finalNotice = 'Release completed'
   }
 
   if (!isTTY) {
