@@ -14,7 +14,7 @@ app.on('ready', async () => {
   // as the first argument and the name of the
   // renderer page (located in the "pages" directory) you
   // would like to load as the second one.
-  setWindowURL(introWindow, 'intro')
+  setWindowURL(introWindow, 'index')
 })
 
 // Quit the app once all windows are closed
