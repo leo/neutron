@@ -93,6 +93,29 @@ It can hold the following properties (the dot in property names indicates a sub 
 | `windows.icon`       | The path to a `.ico` file, which acts as the icon of your Windows application (relative to working directory).                                                                                                                      |
 | `windows.setupIcon`  | By default, the installer for your Windows application will have the same icon as the application itself. If you want a separate one for it, this property can be set to the path to a `.ico` file (relative to working directory). |
 
+## Lifecycle Hooks
+
+If you need to perform custom operations during specific actions `neutron` is taking, you can specify lifecycle scripts in your project's `package.json` file (just like you would do for [npm lifecycle scripts](https://docs.npmjs.com/misc/scripts)).
+
+Here's an example of how this could look:
+
+```json
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "neutron",
+    "build": "neutron build",
+    "neutron-after-bundle": "echo 'This hook is run after neutron has bundled your app'"
+  }
+}
+```
+
+| Script Name                     | When It Runs                                                                                                                                                                                                                                                                        |
+|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `neutron-before-bundle`    | Will be run **before** your app was bundled.                                                                                       |
+| `neutron-after-bundle`     | Will be run **after** your app was bundled.                                                                                       |
+
 ## Badge
 
 Do you want to help us spread the word? Feel free to add this badge to your repository:

@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
 // Native
-const { resolve, basename } = require('path')
+const { resolve, basename, join } = require('path')
 
 // Packages
 const parse = require('arg')
-const { remove } = require('fs-extra')
+const { remove, readJSON } = require('fs-extra')
 
 // Utilities
 const help = require('../lib/help')
@@ -19,6 +19,7 @@ const exportRenderer = require('../lib/build/export')
 const compress = require('../lib/build/compress')
 const createInstaller = require('../lib/build/installer')
 const createRelease = require('../lib/build/release')
+const lifecycle = require('../lib/build/lifecycle')
 
 // Parse the supplied commands and options
 const { _: sub, ...args } = parse({
@@ -32,6 +33,7 @@ const { _: sub, ...args } = parse({
 
 module.exports = async () => {
   const cwd = process.cwd()
+  const pkg = await readJSON(join(cwd, 'package.json'))
   const isWin = process.platform === 'win32'
   const { NODE_ENV, CI } = process.env
   const { isTTY } = CI ? false : process.stdout
@@ -63,7 +65,9 @@ module.exports = async () => {
   await setInfo(output, config)
 
   // Bundle all the application into an `.asar` archive
+  await lifecycle(cwd, pkg, 'before-bundle')
   const bundle = await createBundle(cwd, output, config)
+  await lifecycle(cwd, pkg, 'after-bundle')
 
   if (args['--production'] || isWin) {
     // Create archive and installers from the bundle
