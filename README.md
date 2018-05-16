@@ -95,26 +95,26 @@ It can hold the following properties (the dot in property names indicates a sub 
 
 ## Lifecycle Hooks
 
-Lifecycle hooks allow you to perform custom operations during specific parts of the `neutron build` lifecycle. You can specify neutron lifecycle scripts in your `package.json`, just like you would do for an npm lifecycle script.
+If you need to perform custom operations during specific actions `neutron` is taking, you can specify lifecycle scripts in your project's `package.json` file (just like you would do for [npm lifecycle scripts](https://docs.npmjs.com/misc/scripts)).
 
-_For Example_
+Here's an example of how this could look:
 
 ```json
 {
-  "name": "my-neutron-app",
+  "name": "my-app",
   "version": "1.0.0",
   "scripts": {
-    "start": "neutron",
+    "dev": "neutron",
     "build": "neutron build",
     "neutron-after-bundle": "echo 'This hook is run after neutron has bundled your app'"
   }
 }
 ```
 
-| Script name                     | When it runs                                                                                                                                                                                                                                                                        |
+| Script Name                     | When It Runs                                                                                                                                                                                                                                                                        |
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `neutron-before-bundle`    | Will be run **before** neutron has bundled your app.                                                                                       |
-| `neutron-after-bundle`     | Will be run **after** neutron has bundled your app.                                                                                       |
+| `neutron-before-bundle`    | Will be run **before** your app was bundled.                                                                                       |
+| `neutron-after-bundle`     | Will be run **after** your app was bundled.                                                                                       |
 
 ## Badge
 
