@@ -5,7 +5,7 @@ const { resolve, basename, join } = require('path')
 
 // Packages
 const parse = require('arg')
-const { remove, readJson } = require('fs-extra')
+const { remove, readJSON } = require('fs-extra')
 
 // Utilities
 const help = require('../lib/help')
@@ -33,7 +33,7 @@ const { _: sub, ...args } = parse({
 
 module.exports = async () => {
   const cwd = process.cwd()
-  const pkg = await readJson(join(cwd, 'package.json'))
+  const pkg = await readJSON(join(cwd, 'package.json'))
   const isWin = process.platform === 'win32'
   const { NODE_ENV, CI } = process.env
   const { isTTY } = CI ? false : process.stdout
