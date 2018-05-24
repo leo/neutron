@@ -20,6 +20,7 @@ const compress = require('../lib/build/compress')
 const createInstaller = require('../lib/build/installer')
 const createRelease = require('../lib/build/release')
 const lifecycle = require('../lib/build/lifecycle')
+const codeSign = require('../lib/build/code-sign')
 
 // Parse the supplied commands and options
 const { _: sub, ...args } = parse({
@@ -68,6 +69,12 @@ module.exports = async () => {
   await lifecycle(cwd, pkg, 'before-bundle')
   const bundle = await createBundle(cwd, output, config)
   await lifecycle(cwd, pkg, 'after-bundle')
+
+
+  if (!args['--no-sign']) {
+    await codeSign(cwd, output, config)
+  }
+  
 
   if (args['--production'] || isWin) {
     // Create archive and installers from the bundle
