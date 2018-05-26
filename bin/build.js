@@ -71,7 +71,7 @@ module.exports = async () => {
   await lifecycle(cwd, pkg, 'after-bundle')
 
 
-  if (!args['--no-sign']) {
+  if (args['--production']) {
     await codeSign(cwd, output, config)
   }
   
