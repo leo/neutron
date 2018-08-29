@@ -74,7 +74,6 @@ module.exports = async () => {
   if (args['--production']) {
     await codeSign(cwd, output, config)
   }
-  
 
   if (args['--production'] || isWin) {
     // Create archive and installers from the bundle
