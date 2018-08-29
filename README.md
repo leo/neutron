@@ -148,6 +148,7 @@ Simply embed this markdown code in your `readme.md` file:
 
 After that, you can use the `neutron` command everywhere!
 
-## Author
+## Authors
 
 Leo Lamprecht ([@notquiteleo](https://twitter.com/notquiteleo)) - [ZEIT](https://zeit.co)
+Dave Jeffery ([@DaveJ](https://twitter.com/DaveJ)) - [NDesk](https://ndesk.app)
