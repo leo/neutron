@@ -150,5 +150,5 @@ After that, you can use the `neutron` command everywhere!
 
 ## Authors
 
-Leo Lamprecht ([@notquiteleo](https://twitter.com/notquiteleo)) - [ZEIT](https://zeit.co)
-Dave Jeffery ([@DaveJ](https://twitter.com/DaveJ))
+* Leo Lamprecht ([@notquiteleo](https://twitter.com/notquiteleo)) - [ZEIT](https://zeit.co)
+* Dave Jeffery ([@DaveJ](https://twitter.com/DaveJ))
