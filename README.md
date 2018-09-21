@@ -77,12 +77,16 @@ It can hold the following properties (the dot in property names indicates a sub 
 
 ### macOS
 
-| Property             | Description                                                                                                                                                                                                                                                                        |
-|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `macOS.id`           | The string that identifies your application to the system. As an example: If your company is called "ZEIT" (zeit.co) and your application is called "Now", the `id` should be "co.zeit.now".                                                                                       |
-| `macOS.category`     | The type of application you're building ([possible values](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html#//apple_ref/doc/uid/TP40009250-SW8)).                                                |
-| `macOS.info`         | This property lets you extend the information contained within the `Info.plist` files in your bundle. It holds an object made of key value pairs to include in those files. As an example, adding `LSUIElement` with a value of  `1` would hide the dock icon forever.             |
-| `macOS.icon`         | The path to a `.icns` file, which acts as the icon of your macOS application (relative to working directory).                                                                                                                                                                      |
+| Property                               | Description                                                                                                                                                                                                                                                                        |
+|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `macOS.id`                             | The string that identifies your application to the system. As an example: If your company is called "ZEIT" (zeit.co) and your application is called "Now", the `id` should be "co.zeit.now".                                                                                       |
+| `macOS.category`                       | The type of application you're building ([possible values](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html#//apple_ref/doc/uid/TP40009250-SW8)).                                                |
+| `macOS.info`                           | This property lets you extend the information contained within the `Info.plist` files in your bundle. It holds an object made of key value pairs to include in those files. As an example, adding `LSUIElement` with a value of  `1` would hide the dock icon forever.             |
+| `macOS.icon`                           | The path to a `.icns` file, which acts as the icon of your macOS application (relative to working directory).                                                                                                                                                                      |
+| `macOS.signature.identity`             | Name of certificate to use when signing. Default to be selected with respect to provisioning-profile and platform from keychain or keychain by system default.                                                                                                                     |
+| `macOS.signature.entitlements`         | Path to entitlements file for signing the app. Default to built-in entitlements file, Sandbox enabled for Mac App Store platform.                                                                                                                                                  |
+| `macOS.signature.entitlements-inherit` | Path to child entitlements which inherit the security settings for signing frameworks and bundles of a distribution. This option only applies when signing with entitlements.                                                                                                      |
+| `macOS.signature.flat`                 | Set to `true` to create installer package for shipping on Mac App Store                                                                                                                                                                                                            |
 
 ### Windows
 
@@ -144,6 +148,7 @@ Simply embed this markdown code in your `readme.md` file:
 
 After that, you can use the `neutron` command everywhere!
 
-## Author
+## Authors
 
 Leo Lamprecht ([@notquiteleo](https://twitter.com/notquiteleo)) - [ZEIT](https://zeit.co)
+Dave Jeffery ([@DaveJ](https://twitter.com/DaveJ))
