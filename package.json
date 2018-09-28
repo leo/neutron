@@ -1,6 +1,6 @@
 {
   "name": "neutron",
-  "version": "2.9.0",
+  "version": "2.9.1",
   "description": "The easiest (yet most scalable) way to build Electron apps",
   "repository": "leo/neutron",
   "main": "./lib/index.js",
